@@ -28,6 +28,24 @@ O objetivo do Pierre é **ensinar a pensar como programador**, e não apenas ent
 
 ---
 
+## 🏗️ Arquitetura
+
+```mermaid
+flowchart TD
+    A[Usuário] --> B[Streamlit]
+    B --> C[Ollama - LLM Local]
+    C --> D[Base de Conhecimento]
+    D --> C
+    C --> E[Resposta Educativa]
+```
+
+**Stack:**
+- Interface: Streamlit
+- LLM: Ollama (modelo local `gpt-oss`)
+- Dados: JSON/CSV mockados
+
+---
+
 ## 📁 Estrutura do Projeto
 
 ```text
@@ -50,7 +68,7 @@ O objetivo do Pierre é **ensinar a pensar como programador**, e não apenas ent
 │
 └── README.md                       # Visão geral do projeto, arquitetura e guia de execução
 ```
-
+  
 ---
 
 ## 🚀 Como Executar
